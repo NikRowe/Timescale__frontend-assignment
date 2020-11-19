@@ -19,11 +19,28 @@ $medium-breakpoint: 960px;
   }
 }
 
+.site {
+  max-width: $site-width;
+  display: flex;
+  margin: auto;
+}
+
+.site__img {
+  max-width: $profile-image-width;
+  max-height: $profile-image-width;
+  padding: 1rem;
+}
+
+.site__img--round {
+  border-radius: 50%;
+}
+
 // NAV //
 .nav {
   background-color: $primary-light;
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 
 .nav__logo__text {
@@ -46,10 +63,22 @@ $medium-breakpoint: 960px;
 
 .menu__item {
   margin-right: 1rem;
-  padding: 0.5rem 1rem;
+  padding: $gutter;
   border-radius: 6px; // intentionally not
   &:hover {
     background-color: $primary;
     color: white;
   }
+}
+
+// HEADER //
+.heroImage {
+  width: 100%;
+  max-width: $hero-width;
+  padding: 0rem 3rem;
+  margin-bottom: 0rem;
+}
+
+.site__header {
+  margin-top: 0rem;
 }
