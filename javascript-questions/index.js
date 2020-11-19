@@ -14,7 +14,6 @@ const getDCHeroes = (heroes) => {
   heroes.forEach(hero => {
     hero.publisher.includes("Marvel") ? marvel.push(hero) : ""
   })
-
   heroes = marvel
 
   return heroes;
@@ -34,6 +33,11 @@ const getDCHeroes = (heroes) => {
  * ]
  */
 const convertCharactersToArray = (heroes) => {
+  heroes.forEach(hero => {
+    let charactersArr = []
+    hero.characters = charactersArr.push(hero.characters) 
+  })
+  
   return heroes;
 }
 
