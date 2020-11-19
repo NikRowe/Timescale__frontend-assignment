@@ -88,7 +88,8 @@ $medium-breakpoint: 960px;
 .footer {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0rem 5rem;
   color: white;
   background-color: $primary;
 }
@@ -114,6 +115,9 @@ $medium-breakpoint: 960px;
     max-width: $profile-image-width;
     max-height: $profile-image-width;
   }
+  .footer {
+    padding: 0rem 1rem;
+  }
 }
 @media screen and (max-width: $small-breakpoint) {
   $site-width: 372px;
@@ -132,5 +136,8 @@ $medium-breakpoint: 960px;
   }
   .nav {
     display: none;
+  }
+  .footer {
+    padding: 0rem 1rem;
   }
 }
