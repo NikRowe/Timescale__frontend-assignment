@@ -14,6 +14,7 @@ const getDCHeroes = (heroes) => {
   heroes.forEach(hero => {
     hero.publisher.includes("Marvel") ? marvel.push(hero) : ""
   })
+
   heroes = marvel
 
   return heroes;
@@ -35,9 +36,10 @@ const getDCHeroes = (heroes) => {
 const convertCharactersToArray = (heroes) => {
   heroes.forEach(hero => {
     let charactersArr = []
-    hero.characters = charactersArr.push(hero.characters) 
+    charactersArr.push(hero.characters)
+    hero.characters = charactersArr
   })
-  
+
   return heroes;
 }
 
@@ -55,6 +57,20 @@ const convertCharactersToArray = (heroes) => {
  * }
  */
 const groupByPublisher = (heroes) => {
+  let marvel = []
+  let dc = []
+
+  heroes.forEach(hero => {
+    hero.publisher.includes("Marvel") ? marvel.push(hero) : dc.push(hero)
+  })
+
+  heroes = {
+    "publisher 1": marvel,
+    "publisher 2": dc
+  }
+
+  console.log(heroes)
+
   return heroes;
 }
 
@@ -72,6 +88,14 @@ const groupByPublisher = (heroes) => {
  * ]
  */
 const getDCHeroesWithMoreThanOneCharacter = (heroes) => {
+  let multiCharacters = []
+  heroes.forEach(hero => {
+    let chars = hero.characters
+    let split = chars[0].split(', ')
+    split.length > 1 ? multiCharacters.push(hero) : ""
+  })
+  heroes = multiCharacters
+
   return heroes;
 }
 
