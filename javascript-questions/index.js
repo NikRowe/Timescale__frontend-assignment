@@ -10,6 +10,13 @@ const superHeroes = require('./super-heroes.json');
  * ]
  */
 const getDCHeroes = (heroes) => {
+  let marvel = []
+  heroes.forEach(hero => {
+    hero.publisher.includes("Marvel") ? marvel.push(hero) : ""
+  })
+
+  heroes = marvel
+
   return heroes;
 }
 
