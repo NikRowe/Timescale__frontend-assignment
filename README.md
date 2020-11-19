@@ -1,4 +1,5 @@
 # Thank you for taking the time to review my assignment!
+</i>-Nik Rowe, Jr. Dev </i>
 
 # Timescale frontend interview assignment
 
