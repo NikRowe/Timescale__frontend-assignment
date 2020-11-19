@@ -57,19 +57,20 @@ const convertCharactersToArray = (heroes) => {
  * }
  */
 const groupByPublisher = (heroes) => {
-  let marvel = []
-  let dc = []
+    
+    function groupBy(key) {
+      return function group(array) {
+        return array.reduce((acc, obj) => {
+          const property = obj[key];
+          acc[property] = acc[property] || [];
+          acc[property].push(obj);
+          return acc;
+        }, {});
+      };
+    }
 
-  heroes.forEach(hero => {
-    hero.publisher.includes("Marvel") ? marvel.push(hero) : dc.push(hero)
-  })
-
-  heroes = {
-    "publisher 1": marvel,
-    "publisher 2": dc
-  }
-
-  console.log(heroes)
+    const groupByPub = groupBy('publisher')
+    heroes = groupByPub(heroes)
 
   return heroes;
 }
