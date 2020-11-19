@@ -4,6 +4,7 @@ import "./App.scss";
 import Nav from "./components/nav";
 import Header from "./components/header";
 import Site from "./components/site";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Nav />
       <Header imgSrc={heroBackground} />
       <Site imgSrc={headshot} />
+      <Footer />
     </div>
   );
 }
