@@ -19,27 +19,12 @@ $medium-breakpoint: 960px;
   }
 }
 
-.site {
-  max-width: $site-width;
-  display: flex;
-  margin: auto;
-}
-
-.site__img {
-  max-width: $profile-image-width;
-  max-height: $profile-image-width;
-  padding: 1rem;
-}
-
-.site__img--round {
-  border-radius: 50%;
-}
-
 // NAV //
 .nav {
   background-color: $primary-light;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
 }
 
@@ -57,14 +42,13 @@ $medium-breakpoint: 960px;
 
 .menu {
   display: flex;
-  align-self: center;
   list-style: none;
 }
 
 .menu__item {
   margin-right: 1rem;
   padding: $gutter;
-  border-radius: 6px; // intentionally not
+  border-radius: 6px; // intentionally not standard 10px as the sampel img doesnt look 10px //
   &:hover {
     background-color: $primary;
     color: white;
@@ -79,6 +63,74 @@ $medium-breakpoint: 960px;
   margin-bottom: 0rem;
 }
 
+// SITE //
+.site {
+  max-width: $site-width;
+  display: flex;
+  margin: auto;
+}
+
 .site__header {
   margin-top: 0rem;
+}
+
+.site__img {
+  max-width: $profile-image-width;
+  max-height: $profile-image-width;
+  padding: 1rem;
+}
+
+.site__img--round {
+  border-radius: 50%;
+}
+
+// FOOTER //
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  background-color: $primary;
+}
+
+.links__footer {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+// RESPONSIVNESS //
+@media screen and (max-width: $medium-breakpoint) {
+  $site-width: 720px;
+  $hero-width: 960px;
+  $profile-image-width: 180px;
+  .site {
+    max-width: $site-width;
+  }
+  .heroImage {
+    max-width: $hero-width;
+  }
+  .site__img {
+    max-width: $profile-image-width;
+    max-height: $profile-image-width;
+  }
+}
+@media screen and (max-width: $small-breakpoint) {
+  $site-width: 372px;
+  $hero-width: 500px;
+  $profile-image-width: 93px;
+  .site {
+    max-width: $site-width;
+  }
+  .heroImage {
+    max-width: $hero-width;
+    padding: 0;
+  }
+  .site__img {
+    max-width: $profile-image-width;
+    max-height: $profile-image-width;
+  }
+  .nav {
+    display: none;
+  }
 }
