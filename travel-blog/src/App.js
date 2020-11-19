@@ -6,7 +6,7 @@ import Nav from "./components/header";
 function App() {
   return (
     <div className="app">
-      <Nav imgSrc={heroBackground} />
+      <Nav />
     </div>
   );
 }
