@@ -1,3 +1,5 @@
+# Thank you for taking the time to review my assignment!
+
 # Timescale frontend interview assignment
 
 There are two parts to this assignment which should take around an hour to complete.
